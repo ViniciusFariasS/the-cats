@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Oswald-Regular';
+  src: url('./_assets/fonts/Oswald-Regular.ttf');
+}
+
+$backgroundColor: #2f2f2f;
+
+body {
+  background-color: $backgroundColor;
+}
+
+*{
+  font-family: 'Oswald-Regular', monospace;
+}
