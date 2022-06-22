@@ -1,0 +1,12 @@
+.Home {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    img {
+        margin: 50px;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+    }
+}

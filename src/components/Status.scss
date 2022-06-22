@@ -1,0 +1,25 @@
+.StatusCats{
+    display: flex;
+    width: 60px;
+    justify-content: space-between;
+}
+
+.status {
+    background-color: red;
+    display: flex;
+    flex-grow: 1;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    margin: 1px;
+}
+
+.statuspouco {
+    background-color: green;
+    display: flex;
+    flex-grow: 1;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    margin: 1px;
+}

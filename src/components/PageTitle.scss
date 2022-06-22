@@ -1,0 +1,15 @@
+.PageTitle {
+    display: flex;
+    align-items: center;
+    border-right: 10px solid #48cae4;
+    padding: 15px;
+    background: #caf0f8;
+    border-radius: 0px 0px 150px;
+    height: 70px;
+    color: #00b4d8;
+
+    h1 {
+        margin: 0;
+        font-weight: 400;
+    }
+}

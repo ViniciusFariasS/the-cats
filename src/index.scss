@@ -3,12 +3,13 @@
   src: url('./_assets/fonts/Oswald-Regular.ttf');
 }
 
-$backgroundColor: #2f2f2f;
+$backgroundColor: #fff;
 
 body {
   background-color: $backgroundColor;
+  margin: 0
 }
 
-*{
+* {
   font-family: 'Oswald-Regular', monospace;
 }
