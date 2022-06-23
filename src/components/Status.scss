@@ -1,25 +1,55 @@
-.StatusCats{
+$sencondaryColor: #1982c4;
+
+.StatusCats {
     display: flex;
-    width: 60px;
+    width: 100px;
+    border: solid 2px #000;
+    border-radius: 25px;
+    padding: 0px;
     justify-content: space-between;
+    margin: 5px;
 }
 
-.status {
-    background-color: red;
+.zero {
     display: flex;
     flex-grow: 1;
-    width: 10px;
     height: 10px;
-    border-radius: 100%;
-    margin: 1px;
+    border-radius: 10%;
 }
 
-.statuspouco {
-    background-color: green;
-    display: flex;
-    flex-grow: 1;
-    width: 10px;
+.one {
+    background-color: $sencondaryColor;
+    width: 20%;
     height: 10px;
-    border-radius: 100%;
-    margin: 1px;
+    border-radius: 25px;
+}
+
+.two {
+    background-color:$sencondaryColor;
+    ;
+    width: 40%;
+    height: 10px;
+    border-radius: 25px;
+}
+
+.three {
+    background-color:$sencondaryColor;
+    width: 60%;
+    height: 10px;
+    border-radius: 25px;
+}
+
+.four {
+    background-color:$sencondaryColor;
+    width: 80%;
+    height: 10px;
+    border-radius: 25px;
+}
+
+.five {
+    background-color:$sencondaryColor;
+    width: 100%;
+    height: 10px;
+    border-radius: 25px;
+    
 }

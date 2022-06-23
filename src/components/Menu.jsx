@@ -1,24 +1,35 @@
-import React from "react";
+import React, { useContext } from "react";
+
+import { AuthGoogleContext } from "../contexts/authGoogle";
+
 import './Menu.scss'
 
-import cat from '../_assets/images/TheCats.png';
-
 import { Link } from "react-router-dom";
+import Button from "./Button";
 
 export default function Menu() {
+    const { user, signed, signOut } = useContext(AuthGoogleContext);
+
+    console.log(user)
+
     return (
-        <aside className="Menu">
+        <div className="Menu" >
+
             <nav>
-                <img src={cat} alt="The Cats" />
                 <ul>
                     <li>
-                        <Link to="/">Home</Link>
+                        <Link to="/home">Home</Link>
                     </li>
                     <li>
                         <Link to="/Cats">Cats</Link>
                     </li>
                 </ul>
             </nav>
-        </aside>
+
+            <div className="MenuButton">
+                <span>Bem vindo {user?.displayName }</span>
+                <Button text="Sair" handleOnClick={signOut} flag={!signed} />
+            </div>
+        </div >
     )
 }

@@ -1,37 +1,49 @@
+$primaryColor: #ca7df9;
+$sencondaryColor: #14213d;
+
 .Menu {
     display: flex;
-    flex-basis: 200px;
-    text-align: center;
-    background: linear-gradient(#00b4d8 0%, #48cae4 100%);
+    justify-content: space-between;
 
-    z-index: 1;
+    background-color: $sencondaryColor;
+    
+    .MenuButton {
+        display: flex;
+        margin: 10px;
+        color: white;
+        align-items: center;
+        span{
+            margin-right: 15px;
+        }
+    }
 
     nav {
-        flex-grow: 1;
-        
+        width: 1200px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+
+        display: flex;
+        justify-content: space-between;
+
         img {
-            width: 40%;
+            width: 20%;
         }
 
         ul {
+            display: flex;
             list-style: none;
-            padding: 0;
+            align-items: center;
 
             li {
-                display: flex;
+                margin-right: 1em;
 
                 a {
-                    flex: 1;
-                    padding: 10px;
-
-
+                    color: #FFF;
                     text-decoration: none;
-                    color: #fff;
-                    font-size: 1.3rem;
                 }
 
                 a:hover {
-                    background: #00000020;
+                    color: $primaryColor;
                 }
             }
         }

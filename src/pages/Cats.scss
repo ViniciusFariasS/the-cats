@@ -1,5 +1,30 @@
-.Cats{
+$primaryColor: #ca7df9;
+$sencondaryColor: #14213d;
+
+.Cats {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex: 1;
+
+    .CardsCat {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .SearchCats {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Search {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        background-color: $sencondaryColor;
+        width: 1220px;
+        padding-right: 10px;
+        height: 50px;
+    }
 }

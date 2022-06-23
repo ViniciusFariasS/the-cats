@@ -1,0 +1,19 @@
+$primaryColor: #ca7df9;
+$sencondaryColor: #14213d;
+
+.Btn {
+    background-color: $primaryColor;
+    color: #fff;
+    padding: .7em 1.2em;
+    text-decoration: none;
+    transition: .5s;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+    border: none;
+}
+
+.Btn:hover {
+    color:$sencondaryColor;
+}

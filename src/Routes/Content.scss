@@ -1,6 +1,7 @@
 .Content {
+    width: 1200px;
     display: flex;
-    flex: 1;
-    flex-direction: column;
-    overflow-y: scroll;
+    justify-content: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
 }

@@ -1,25 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './Status.scss';
 
-export default function Status(props) {
-    let classes = 'status'
-    classes += props.nada ? 'nada' : ''
-    classes += props.pouco ? 'pouco' : ''
-    classes += props.medio ? 'medio' : ''
-    classes += props.muito ? 'muito' : ''
-    classes += props.extremo ? 'extremo' : ''
+export default function Status({ status }) {
 
+    function setStatus(status) {
+        let value = '';
+
+        switch (status) {
+            case 0:
+                return value = 'zero';
+            case 1:
+                return value = 'one';
+            case 2:
+                return value = 'two';
+            case 3:
+                return value = 'three';
+            case 4:
+                return value = 'four';
+            case 5:
+                return value = 'five';
+        }
+    }
+    
     return (
         <div className="StatusCats">
-            <div className={classes}>
-            </div>
-            <div className={classes}>
-            </div>
-            <div className={classes}>
-            </div>
-            <div className={classes}>
-            </div>
-            <div className={classes}>
+            <div className={`${setStatus(status)}`}>
             </div>
         </div>
     )
