@@ -10,19 +10,16 @@ export default function Cats() {
 
     const [response, setResponse] = useState([])
 
-    // useEffect(function () {
-    //     api.get("breeds")
-    //         .then((resp) => setResponse(resp.data))
-    // }, [])
+    useEffect(function () {
+        api.get("breeds")
+            .then((resp) => setResponse(resp.data[1]))
+    }, [])
 
     const [search, setSearch] = useState('')
 
-
-    useEffect(function () {
-        api.get(`breeds/search/?name=${search}`)
-            .then((resp) => setResponse(resp.data))
-    }, [search])
-
+    useEffect(function(){
+        setResponse(response.find(search))
+    },[search])
 
     return (
         <div className="Cats">
@@ -33,11 +30,11 @@ export default function Cats() {
                         <Input placeholder='search' handleOnChange={e => setSearch(e.target.value)} />
                     </div>
                     <div className="CardsCat">
-                        {response.map((resp) => (
+                        {response.length > 1 ? response.map(resp => {
                             <Card
                                 name={resp.name}
                                 description={resp.description}
-                                imageId={resp.reference_image_id ? resp.reference_image_id : ''}
+                                image={resp.image}
                                 temperament={resp.temperament}
                                 origin={resp.origin}
                                 intelligence={resp.intelligence}
@@ -46,7 +43,19 @@ export default function Cats() {
                                 socialNeeds={resp.social_needs}
                                 key={resp.id}
                             />
-                        ))}
+                        }) : <Card
+                            name={response.name}
+                            description={response.description}
+                            image={response.image}
+                            temperament={response.temperament}
+                            origin={response.origin}
+                            intelligence={response.intelligence}
+                            adaptability={response.adaptability}
+                            energyLevel={response.energy_level}
+                            socialNeeds={response.social_needs}
+                            key={response.id}
+                        />
+                        }
                     </div>
                 </div>
             </div>

@@ -18,7 +18,7 @@ export default function Login() {
     if (!signed) {
         return (
             <div className="Login">
-                <img src={cats} alt="" />
+                <img src={cats}  />
                 <Button text="Sign in with google" handleOnClick={loginGoogle} />
             </div>
         )

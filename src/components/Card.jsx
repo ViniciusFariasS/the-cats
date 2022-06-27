@@ -7,24 +7,24 @@ import cat from '../_assets/images/cat.png';
 import Status from "./Status";
 import api from "../services/api";
 
-const Card = ({ name, temperament, origin, imageId, intelligence, adaptability, energyLevel, socialNeeds }) => {
+const Card = ({ name, temperament, origin, image, intelligence, adaptability, energyLevel, socialNeeds }) => {
 
-    const [images, setImages] = useState([])
+    //const [images, setImages] = useState([])
 
-    useEffect(function () {
-        if (imageId !== '' && imageId !== null) {
-            api.get(`images/${imageId}`)
-                .then(resp => setImages(resp.data));
-        }
-        else {
-            setImages(cat);
-        }
-    }, [])
+    // useEffect(function () {
+    //     if (imageId !== '' && imageId !== null) {
+    //         api.get(`images/${imageId}`)
+    //             .then(resp => setImages(resp.data));
+    //     }
+    //     else {
+    //         setImages(cat);
+    //     }
+    // }, [])
 
     return (
         <div className="Card">
             <div className="Title">
-                <img src={images?.url ? images.url : cat} alt="cat" />
+                <img src={image?.url ? image.url : cat} alt="cat" />
                 <h3>{name}</h3>
             </div>
             <div className="ContentCard">

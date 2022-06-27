@@ -10,8 +10,6 @@ import Button from "./Button";
 export default function Menu() {
     const { user, signed, signOut } = useContext(AuthGoogleContext);
 
-    console.log(user)
-
     return (
         <div className="Menu" >
 
@@ -28,7 +26,7 @@ export default function Menu() {
 
             <div className="MenuButton">
                 <span>Bem vindo {user?.displayName }</span>
-                <Button text="Sair" handleOnClick={signOut} flag={!signed} />
+                <Button text="Sair" handleOnClick={signOut} />
             </div>
         </div >
     )

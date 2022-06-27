@@ -13,7 +13,7 @@ const PrivateRoute = ({ element: Element }) => {
     return (
         authToken ?
             <>
-                < Menu />
+                <Menu />
                 <Element />
             </> : <Navigate to='/' />
     )
